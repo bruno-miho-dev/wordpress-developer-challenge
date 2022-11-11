@@ -1,0 +1,274 @@
+/*
+Theme Name: Play
+Author: Bruno Miho
+Version: 1.0
+Text Domain: bx-desafio
+Global Prefix: bx_desafio_
+*/
+
+@font-face {
+  font-family: "Circular Spotify TxT - Light";
+  src: url("./assets/fonts/CircularSpotifyTxT-Light.eot");
+  src: url("./assets/fonts/CircularSpotifyTxT-Light.eot?#iefix") format("eot"),
+    url("./assets/fonts/CircularSpotifyTxT-Light.woff") format("woff"),
+    url("./assets/fonts/CircularSpotifyTxT-Light.ttf") format("truetype"),
+    url("./assets/fonts/CircularSpotifyTxT-Light.svg#webfont") format("svg");
+}
+@font-face {
+  font-family: "Circular Spotify TxT - Medium";
+  src: url("./assets/fonts/CircularSpotifyTxT-Med.eot");
+  src: url("./assets/fonts/CircularSpotifyTxT-Med.eot?#iefix") format("eot"),
+    url("./assets/fonts/CircularSpotifyTxT-Med.woff") format("woff"),
+    url("./assets/fonts/CircularSpotifyTxT-Med.ttf") format("truetype"),
+    url("./assets/fonts/CircularSpotifyTxT-Med.svg#webfont") format("svg");
+}
+@font-face {
+  font-family: "Circular Spotify TxT - Book";
+  src: url("./assets/fonts/CircularSpotifyTxT-Book.eot");
+  src: url("./assets/fonts/CircularSpotifyTxT-Book.eot?#iefix") format("eot"),
+    url("./assets/fonts/CircularSpotifyTxT-Book.woff") format("woff"),
+    url("./assets/fonts/CircularSpotifyTxT-Book.ttf") format("truetype"),
+    url("./assets/fonts/CircularSpotifyTxT-Book.svg#webfont") format("svg");
+}
+@font-face {
+  font-family: "Circular Spotify TxT - Bold";
+  src: url("./assets/fonts/CircularSpotifyTxT-Bold.eot");
+  src: url("./assets/fonts/CircularSpotifyTxT-Bold.eot?#iefix") format("eot"),
+    url("./assets/fonts/CircularSpotifyTxT-Bold.woff") format("woff"),
+    url("./assets/fonts/CircularSpotifyTxT-Bold.ttf") format("truetype"),
+    url("./assets/fonts/CircularSpotifyTxT-Bold.svg#webfont") format("svg");
+}
+@font-face {
+  font-family: "Circular Spotify TxT - Black";
+  src: url("./assets/fonts/CircularSpotifyTxT-Black.eot");
+  src: url("./assets/fonts/CircularSpotifyTxT-Black.eot?#iefix") format("eot"),
+    url("./assets/fonts/CircularSpotifyTxT-Black.woff") format("woff"),
+    url("./assets/fonts/CircularSpotifyTxT-Black.ttf") format("truetype"),
+    url("./assets/fonts/CircularSpotifyTxT-Black.svg#webfont") format("svg");
+}
+
+:root {
+  /*COLORS*/
+  --black: #000000;
+  --white: #ffffff;
+  --red: #ff0000;
+  --gray-500: #000000e6;
+  --gray-900: #121212;
+
+  /*TIPOGRAFIA*/
+  --font-light: "Circular Spotify TxT - Light", sans-serif;
+  --font-medium: "Circular Spotify TxT - Medium", sans-serif;
+  --font-book: "Circular Spotify TxT - Book", sans-serif;
+  --font-bold: "Circular Spotify TxT - Bold", sans-serif;
+  --font-black: "Circular Spotify TxT - Black", sans-serif;
+
+  /* ESPACAMENTO */
+  --letter-057: 0.57px;
+  --letter-1: -1px;
+  --letter-3: -0.3px;
+  --letter-4: -4px;
+}
+
+main,
+.content {
+  padding-bottom: 110px;
+}
+
+.container-fluid {
+  padding: 0 140px;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+}
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+a:hover {
+  color: var(--red);
+}
+.content {
+  margin-top: 140px;
+}
+.header {
+  background-color: var(--gray-500);
+  color: var(--white);
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+}
+header .menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+header .menu > li > a {
+  font-family: var(--font-medium);
+  font-size: 19px;
+  letter-spacing: var(--letter-057);
+}
+header .menu > li > a:hover,
+header .menu > li > a.ativo {
+  color: var(--red);
+}
+.banner .titulo_categoria,
+.banner .duracao {
+  font-family: var(--font-medium);
+  font-size: 18px;
+  letter-spacing: var(--letter-057);
+  border: 1px solid var(--white);
+  padding: 3px 40px;
+}
+.banner .content {
+  position: absolute;
+  bottom: 212px;
+  left: 140px;
+}
+.banner .titulo_categoria {
+  background-color: var(--white);
+  color: #5a5a5a;
+}
+.banner .titulo_video {
+  font-family: var(--font-black);
+  font-size: 100px;
+  line-height: 1;
+  letter-spacing: var(--letter-4);
+}
+.banner .btnInfo {
+  font-family: var(--font-medium);
+  font-size: 18px;
+  letter-spacing: var(--letter-057);
+  padding: 19px 78px;
+  background-color: var(--red);
+  border-radius: 3px;
+}
+.banner .btnInfo:hover {
+  background-color: #c10101;
+  color: var(--white);
+}
+.home .videos {
+  padding-top: 101px;
+  padding-left: 140px;
+}
+.videos .imgCapa {
+  width: 100%;
+  height: 387px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-bottom: 30px;
+}
+.videos span {
+  display: inline-block;
+  border: 1px solid var(--white);
+  border-radius: 3px;
+  padding: 3px 40px;
+}
+.videos h2 {
+  font-family: var(--font-black);
+  color: var(--red);
+  font-size: 40px;
+  letter-spacing: var(--letter-1);
+  margin-bottom: 2rem;
+}
+.videos h3 {
+  font-family: var(--font-black);
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: var(--letter-3);
+}
+.videoEmbed {
+  filter: brightness(0.6);
+  width: 100%;
+  height: 800px;
+}
+
+/* TAXONIMIA.PHP */
+.interna_videos .titulo_categoria {
+  font-family: var(--font-black);
+  font-size: 40px;
+  letter-spacing: var(--letter-1);
+  color: var(--red);
+}
+.interna_videos .descricao_categoria {
+  font-family: var(--font-medium);
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: var(--letter-054);
+}
+
+/* SINGLE.PHP */
+.texto-single {
+  font-family: var(--font-medium);
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: var(--letter-054);
+}
+
+.footer {
+  background-color: var(--gray-900);
+  padding: 105px 0 182px 0;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .container-fluid {
+    padding: 0 70px;
+  }
+  .menuFlutuante {
+    background-color: var(--gray-500);
+    color: var(--white);
+    padding: 30px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+  .menuFlutuante .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menuFlutuante .menu > li > a {
+    font-family: var(--font-medium);
+    font-size: 19px;
+    letter-spacing: var(--letter-057);
+  }
+  .menuFlutuante .menu > li > a:hover,
+  .menuFlutuante .menu > li > a.ativo {
+    color: var(--red);
+  }
+  .banner .titulo_video {
+    font-size: 80px;
+  }
+  .home .videos {
+    padding-top: 50px;
+    padding-left: 70px;
+  }
+  .banner .content {
+    bottom: 0px;
+    left: 70px;
+  }
+  .videoEmbed {
+    height: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .banner .content {
+    left: 50px;
+  }
+  .menuFlutuante .menu > li > a {
+    font-size: 14px;
+  }
+  .single .banner .titulo_video {
+    font-size: 60px;
+  }
+}
